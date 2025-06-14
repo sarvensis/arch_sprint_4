@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask architecture
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+
+  - story: greet and ask architecture and thanks
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: thanks
+      - action: utter_thanks
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: thanks
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+
+  - story: ask for more info
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
