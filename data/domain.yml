@@ -9,6 +9,7 @@ intents:
   - deny
   - request_info
   - thanks
+  - ask_weather
 
 responses:
   utter_greet:
@@ -32,8 +33,18 @@ responses:
   utter_thanks:
     - text: Рад был помочь!
 
+  # utter_greet:
+  #   - text: Привет! Я могу рассказать о погоде. Назови город 😊
+
+  utter_ask_city:
+    - text: В каком городе ты хочешь узнать погоду?
+
+  utter_weather:
+    - text: Ищу погоду в городе {city}...
+
 entities:
   - topic
+  - action_get_weather
 
 slots:
   topic:
@@ -41,6 +52,9 @@ slots:
     influence_conversation: false
     mappings:
       - type: from_text
+  city:
+    type: text
+    influence_conversation: true
 
 session_config:
   session_expiration_time: 60

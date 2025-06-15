@@ -25,3 +25,14 @@ rules:
     steps:
       - intent: request_info
       - action: utter_ask_more
+
+  - rule: Приветствие
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # - rule: Получить погоду
+  #   steps:
+  #     - intent: ask_weather
+  #     - action: utter_weather
+  #     - action: action_get_weather
