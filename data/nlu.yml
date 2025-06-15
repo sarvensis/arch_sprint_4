@@ -6,6 +6,17 @@ nlu:
       - Привет
       - Здравствуйте
       - Добрый день
+      - хей
+      - hello
+
+  - intent: ask_weather
+    examples: |
+      - Какая погода в [Москва](city)?
+      - Покажи погоду в [London](city)
+      - Хочу узнать погоду в [Париж](city)
+      - Как там в [Новосибирск](city)?
+      - Погода в [Berlin](city)
+      - Что с погодой в [Токио](city)?
 
   - intent: goodbye
     examples: |
